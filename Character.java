@@ -1,14 +1,22 @@
 public class Character {
 
+    public enum CharAlignment {
+        NEUTRAL,
+        GOOD,
+        EVIL;
+    }
+
     private String name;
     private int health;
     private int maxHealth;
+    private CharAlignment alignment;
 
     // default constructor
     public Character() {
         this.name = "Default";
         this.health = 100;
         this.maxHealth = 100;
+        this.alignment = CharAlignment.NEUTRAL;
     }
 
     // constructor with parameters
@@ -16,6 +24,7 @@ public class Character {
         this.name = name;
         this.health = maxHealth;
         this.maxHealth = maxHealth;
+        this.alignment = CharAlignment.NEUTRAL;
     }
 
     // getter function for name
@@ -46,5 +55,9 @@ public class Character {
 
     public int getMaxHealth() {
         return maxHealth;
+    }
+
+    public CharAlignment getAlignment() {
+        return alignment;
     }
 }

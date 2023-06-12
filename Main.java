@@ -2,7 +2,7 @@ public class Main {
 
     public static void printCharInfo(Character character) {
         System.out.println("=== CURRENT STATS ===");
-        System.out.println("Name: " + character.getName());
+        System.out.println("Name: " + character.getName() + " - " + character.getAlignment());
         System.out.println("Health: " + character.getHealth() + "/" + character.getMaxHealth());
         System.out.println("=====================");
         System.out.println();
